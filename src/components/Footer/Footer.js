@@ -1,23 +1,23 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import React from 'react';
 
 import Accordion from '../Accordion';
 import Container from '../Container';
-import Dropdown from '../Dropdown/Dropdown';
-import FormInputField from '../FormInputField/FormInputField';
+//import Dropdown from '../Dropdown/Dropdown';
+//import FormInputField from '../FormInputField/FormInputField';
 import Icon from '../Icons/Icon';
-import Button from '../Button';
+//import Button from '../Button';
 import Config from '../../config.json';
 import * as styles from './Footer.module.css';
 
 const Footer = (prop) => {
-  const [email, setEmail] = useState('');
+  //const [email, setEmail] = useState('');
 
-  const subscribeHandler = (e) => {
-    e.preventDefault();
-    setEmail('');
-    console.log('Subscribe this email: ', email);
-  };
+  // const subscribeHandler = (e) => {
+  //   e.preventDefault();
+  //   setEmail('');
+  //   console.log('Subscribe this email: ', email);
+  // };
 
   const handleSocialClick = (platform) => {
     window.open(Config.social[platform]);
@@ -69,7 +69,7 @@ const Footer = (prop) => {
             })}
             <div className={styles.newsLetter}>
               <div className={styles.newsLetterContent}>
-                <span className={styles.linkTitle}>Newsletter</span>
+                {/* <span className={styles.linkTitle}>Newsletter</span>
                 <p className={styles.promoMessage}>
                   Get 15% off your first purchase! Plus, be the first to know
                   about sales, new product launches and exclusive offers!
@@ -85,9 +85,9 @@ const Footer = (prop) => {
                     placeholder={'Email'}
                     handleChange={(_, e) => setEmail(e)}
                   />
-                </form>
+                </form> */}
                 <div className={styles.socialContainer}>
-                  {Config.social.youtube && (
+                  {/* {Config.social.youtube && (
                     <div
                       onClick={() => handleSocialClick('youtube')}
                       role={'presentation'}
@@ -95,7 +95,7 @@ const Footer = (prop) => {
                     >
                       <Icon symbol={'youtube'}></Icon>
                     </div>
-                  )}
+                  )} */}
 
                   {Config.social.instagram && (
                     <div
@@ -117,7 +117,7 @@ const Footer = (prop) => {
                     </div>
                   )}
 
-                  {Config.social.twitter && (
+                  {/* {Config.social.twitter && (
                     <div
                       onClick={() => handleSocialClick('twitter')}
                       role={'presentation'}
@@ -125,7 +125,7 @@ const Footer = (prop) => {
                     >
                       <Icon symbol={'twitter'}></Icon>
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -135,15 +135,15 @@ const Footer = (prop) => {
       <div className={styles.contentBottomContainer}>
         <Container size={'large'} spacing={'min'}>
           <div className={styles.contentBottom}>
-            <div className={styles.settings}>
+            {/* <div className={styles.settings}>
               <Dropdown
                 label={'Country/Region'}
                 optionList={Config.currencyList}
               />
               <Dropdown label={'Language'} optionList={Config.languageList} />
-            </div>
+            </div> */}
             <div className={styles.copyrightContainer}>
-              <div className={styles.creditCardContainer}>
+              {/* <div className={styles.creditCardContainer}>
                 {Config.paymentOptions.amex && (
                   <img
                     className={styles.amexSize}
@@ -165,16 +165,10 @@ const Footer = (prop) => {
                     alt={'visa'}
                   ></img>
                 )}
-              </div>
+              </div> */}
               <span>
-                {new Date().getFullYear()} (c) . Built by{' '}
-                <Button target={true} href="https://www.matterdesign.com.au/">
-                  Matter.
-                </Button>{' '}
-                Powered by{' '}
-                <Button target={true} href="https://jamm.matter.design/">
-                  JAMM.™
-                </Button>
+                {new Date().getFullYear()} . Made with {' '}
+                <Icon symbol={'heartFill'}></Icon>
               </span>
             </div>
           </div>

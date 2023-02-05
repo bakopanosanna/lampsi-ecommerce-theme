@@ -1,9 +1,9 @@
 import React, { useState, useEffect, createRef } from 'react';
 import { Link, navigate } from 'gatsby';
 
-import { isAuth } from '../../helpers/general';
+//import { isAuth } from '../../helpers/general';
 
-import AddNotification from '../AddNotification';
+//import AddNotification from '../AddNotification';
 import Brand from '../Brand';
 import Container from '../Container';
 import Config from '../../config.json';
@@ -27,7 +27,7 @@ const Header = (prop) => {
   const [search, setSearch] = useState('');
 
   const searchRef = createRef();
-  const bannerMessage = 'Free shipping worldwide';
+  //const bannerMessage = 'Free shipping worldwide';
   const searchSuggestions = [
     'Oversize sweaters',
     'Lama Pajamas',
@@ -80,9 +80,9 @@ const Header = (prop) => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.headerMessageContainer}>
+      {/* <div className={styles.headerMessageContainer}>
         <span>{bannerMessage}</span>
-      </div>
+      </div> */}
       <Container size={'large'} spacing={'min'}>
         {/* header container */}
         <div className={styles.header}>
@@ -119,7 +119,7 @@ const Header = (prop) => {
           </div>
           <Brand />
           <div className={styles.actionContainers}>
-            <button
+            {/* <button
               aria-label="Search"
               className={`${styles.iconButton} ${styles.iconContainer}`}
               onClick={() => {
@@ -127,7 +127,7 @@ const Header = (prop) => {
               }}
             >
               <Icon symbol={'search'}></Icon>
-            </button>
+            </button> 
             <Link
               aria-label="Favorites"
               href="/account/favorites"
@@ -157,7 +157,7 @@ const Header = (prop) => {
             </button>
             <div className={styles.notificationContainer}>
               <AddNotification openCart={() => setShowMiniCart(true)} />
-            </div>
+            </div> */}
           </div>
         </div>
 

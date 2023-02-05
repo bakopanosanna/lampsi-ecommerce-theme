@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './ProductCard.module.css';
 
-import Icon from '../Icons/Icon';
+//import Icon from '../Icons/Icon';
 import CurrencyFormatter from '../CurrencyFormatter';
 
 const ProductCard = (props) => {
-  const [isWishlist, setIsWishlist] = useState(false);
+  //const [isWishlist, setIsWishlist] = useState(false);
   const {
     image,
     imageAlt,
@@ -14,7 +14,6 @@ const ProductCard = (props) => {
     price,
     originalPrice,
     meta,
-    showQuickView,
     height = 580,
   } = props;
 
@@ -22,15 +21,15 @@ const ProductCard = (props) => {
     navigate('/product/sample');
   };
 
-  const handleQuickView = (e) => {
-    e.stopPropagation();
-    showQuickView();
-  };
+  // const handleQuickView = (e) => {
+  //   e.stopPropagation();
+  //   showQuickView();
+  // };
 
-  const handleFavorite = (e) => {
-    e.stopPropagation();
-    setIsWishlist(!isWishlist);
-  };
+  // const handleFavorite = (e) => {
+  //   e.stopPropagation();
+  //   setIsWishlist(!isWishlist);
+  // };
 
   return (
     <div className={styles.root}>
@@ -40,14 +39,14 @@ const ProductCard = (props) => {
         role={'presentation'}
       >
         <img style={{ height: `${height}px` }} src={image} alt={imageAlt}></img>
-        <div
+        {/* <div
           className={styles.bagContainer}
           role={'presentation'}
           onClick={(e) => handleQuickView(e)}
         >
           <Icon symbol={'bagPlus'} />
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={styles.heartContainer}
           role={'presentation'}
           onClick={(e) => handleFavorite(e)}
@@ -60,7 +59,7 @@ const ProductCard = (props) => {
           >
             <Icon symbol={'heartFill'}></Icon>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className={styles.detailsContainer}>
         <span className={styles.productName}>{name}</span>

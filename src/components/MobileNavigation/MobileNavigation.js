@@ -3,7 +3,7 @@ import { Link, navigate } from 'gatsby';
 
 import Config from '../../config.json';
 import Icon from '../Icons/Icon';
-import { isAuth } from '../../helpers/general';
+//import { isAuth } from '../../helpers/general';
 
 //TO DO: refactor this to handle multiple nested links to avoid hardcoding 'depth'
 // have to restructure config.json
@@ -28,7 +28,7 @@ const MobileNavigation = (props) => {
     <div className={styles.root}>
       <nav>
         <div className={styles.headerAuth}>
-          {depth === 0 && isAuth() === false && (
+          {/* {depth === 0 && isAuth() === false && (
             <div className={styles.authLinkContainer}>
               <Link to={'/signup'}>Sign Up</Link>
               <Link to={'/login'}>Login</Link>
@@ -44,9 +44,9 @@ const MobileNavigation = (props) => {
               <span className={styles.welcomeMessage}>Welcome, John</span>
               <Icon symbol={'caret'}></Icon>
             </div>
-          )}
+          )} */}
 
-          {depth === -1 && isAuth() === true && (
+          {/* {depth === -1 && isAuth() === true && (
             <div
               className={styles.previousLinkContainer}
               onClick={() => setDepth(0)}
@@ -57,7 +57,7 @@ const MobileNavigation = (props) => {
               </div>
               <span>my account</span>
             </div>
-          )}
+          )} */}
 
           {depth === 1 && (
             <div
@@ -110,12 +110,12 @@ const MobileNavigation = (props) => {
                   </Link>
                 );
               })}
-              <div className={styles.navFooter}>
+              {/* <div className={styles.navFooter}>
                 <Link to={'/favorites'}>
                   <Icon symbol={'heart'} />
                   Favorites (0)
                 </Link>
-              </div>
+              </div> */}
             </div>
           )}
 
