@@ -3,10 +3,16 @@
     justify-content: center;
     cursor: pointer;
 }
+.secondary {
+    margin-left: 10px;
+}
 
 @media (max-width: 800px) {
     .root svg {
         width: 90px;
         height: 16.67px;
+    }
+    .secondary {
+        margin-left: -16px;
     }
 }
