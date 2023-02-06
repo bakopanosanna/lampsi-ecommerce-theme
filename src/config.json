@@ -61,7 +61,7 @@
   "headerLinks": [
     {
       "menuLabel": "New collection",
-      "menuLink": "/collection"
+      "menuLink": "/new-collection"
     },
     {
       "menuLabel": "Sales",
@@ -70,6 +70,11 @@
     {
       "menuLabel": "About",
       "menuLink": "/about",
+      "category": null
+    },
+    {
+      "menuLabel": "Contact",
+      "menuLink": "/support#contact",
       "category": null
     }
   ],
