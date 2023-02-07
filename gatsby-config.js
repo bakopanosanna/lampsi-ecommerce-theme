@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Sydney Ecommerce Theme`,
-    siteUrl: `https://jamm.matter.design`,
+    title: `Lampsi by Anna`,
+    description: `Beads collection handmade`,
+    image: `/lampsi-03.jpeg`,
+    siteUrl: `https://www.lampsi.ch`,
   },
   plugins: [
     {
