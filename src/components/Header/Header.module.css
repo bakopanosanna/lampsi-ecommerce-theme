@@ -56,6 +56,7 @@
     border-bottom: 2px solid transparent;
     transition: border 0.3s ease-in-out;
     width: 100%;
+    white-space: nowrap
 }
 
 .activeLink {

@@ -8,11 +8,8 @@
 }
 
 @media (max-width: 800px) {
-    .root svg {
-        width: 90px;
-        height: 16.67px;
-    }
-    .secondary {
-        margin-left: -16px;
+    .root img {
+        width: 170px;
+        /* height: 16.67px; */
     }
 }
